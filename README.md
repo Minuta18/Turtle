@@ -9,7 +9,9 @@
 **begin**
 
   tur.penDown();
+  
   tur.setAngle(45);
+  
   tur.go(100);
   
 **end.**  
