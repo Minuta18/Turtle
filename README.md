@@ -2,8 +2,7 @@
 
 Модуль позваляет работать с черепашьей графикой в языке PascalABC.NET. Для работы требуется наличие модуля GraphABC (встроенный модуль). Пример кода:
 
-`{Pascal}
-uses turtlePas;
+`Pascal uses turtlePas;
 
 var tur := new turtle(200, 100);
 
