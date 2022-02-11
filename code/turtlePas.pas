@@ -66,9 +66,15 @@ interface
       end;
       
       ///Устанавливает Угол
-      procedure setAngle(angle: integer);
+      procedure setAngle(angle: real);
       begin
-        self.angle := DegToRad(angle mod 360);
+        self.angle := DegToRad(angle);
+      end;
+      
+      ///Устанавливает угол в радианах
+      procedure setAngleRad(angle: real);
+      begin
+        self.angle := angle;
       end;
       
       ///Поворачивает черепашку на угол
