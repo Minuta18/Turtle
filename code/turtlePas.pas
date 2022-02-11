@@ -78,9 +78,9 @@ interface
       end;
       
       ///Поворачивает черепашку на угол
-      procedure newAngle(angle: integer);
+      procedure newAngle(angle: real);
       begin
-        self.angle += DegToRad(angle mod 360);
+        self.angle += DegToRad(angle);
       end;
       
       ///Очищает всё
@@ -89,10 +89,17 @@ interface
         Window.Clear;
       end;
       
+      ///Рисует точку в позиции черепахи с радиусом n
+      procedure dot(n: integer);
+      begin
+        SetBrushColor(clBlack);
+        if self.isPenDown then Circle(Trunc(x), Trunc(y), Trunc(n));
+      end;
+      
       ///Изменяет толщину пера
       procedure setPenWidth(n: integer);
       begin
-        SetPenWidth(n);
+        GraphABC.SetPenWidth(n);
       end;
       
       ///Двигает черепашку на расстояние n
